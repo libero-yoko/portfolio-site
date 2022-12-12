@@ -8,10 +8,19 @@ module.exports = {
     extend: {
       colors: {
         green: '#637a5f',
-        yellow: '#f8ecc7'
+        yellow: '#f8ecc7',
       },
       backgroundImage: {
         'green-dots': "url('/img/watercolor-green-s.jpg')",
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        },
+      },
+      animation: {
+        wiggle: 'wiggle 1s ease-out 1',
       },
     },
   },

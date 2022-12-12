@@ -31,12 +31,26 @@ a {
 .slide-down{
   animation: slide-down 1s ease-in-out;
 }
+
 @keyframes slide-down {
   0% {
-    transform:translateY(-100%)
+    transform:translateY(-100%);
   }
   100% {
-    transform:translateY(0%)
+    transform:translateY(0%);
+  }
+}
+
+.grow-down{
+  animation: grow-down 0.7s ease-out forwards;
+}
+
+@keyframes grow-down {
+  0% {
+    transform:translateY(-20%);
+  }
+  100% {
+    transform:translateY(0%);
   }
 }
 
@@ -45,7 +59,7 @@ a {
 }
 
 .slide-up:hover{
-  animation:slide-up 1s ease-in-out;
+  animation:slide-up 0.5s ease-in-out;
   animation-fill-mode:forwards;
 }
 
@@ -58,6 +72,9 @@ a {
   }
 }
 
+.animate-spin {
+  animation: spin 1s 1;
+}
 
 @media (prefers-color-scheme: dark) {
   html {
