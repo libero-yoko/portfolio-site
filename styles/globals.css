@@ -28,10 +28,10 @@ a {
   }
 }
 
-.bounce-once{
-  animation: bounce-in 1s ease-in-out;
+.slide-down{
+  animation: slide-down 1s ease-in-out;
 }
-@keyframes bounce-in {
+@keyframes slide-down {
   0% {
     transform:translateY(-100%)
   }
@@ -40,6 +40,23 @@ a {
   }
 }
 
+.slide-up{
+  transform:translateY(70%)
+}
+
+.slide-up:hover{
+  animation:slide-up 1s ease-in-out;
+  animation-fill-mode:forwards;
+}
+
+@keyframes slide-up {
+  0%{
+    transform:translateY(70%)
+  }
+  100%{
+    transform:translateY(0%)
+  }
+}
 
 
 @media (prefers-color-scheme: dark) {

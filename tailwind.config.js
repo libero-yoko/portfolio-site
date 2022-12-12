@@ -6,8 +6,12 @@ module.exports = {
   ],
   theme: {
     extend: {
-      animation: {
-        'bounce-slow': 'bounce 1.5s linear 0',
+      colors: {
+        green: '#637a5f',
+        yellow: '#f8ecc7'
+      },
+      backgroundImage: {
+        'green-dots': "url('/img/watercolor-green-s.jpg')",
       },
     },
   },
