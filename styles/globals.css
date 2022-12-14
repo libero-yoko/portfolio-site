@@ -18,23 +18,11 @@ a {
   box-sizing: border-box;
 }
 
-.menu{
-  background-color: #9e999a;
-  display:none;
-  width:100vw;
-  height: 100vh;
-  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.menu .active {
-  background-color: #e07a8d;
-  display: flex;
-}
-
 .slide-down{
-  animation: slide-down 0.5s ease-out;
-} 
+  animation: slide-down 0.5s ease-in-out;
+}
 
- @keyframes slide-down {
+@keyframes slide-down {
   0% {
     transform:translateY(-100%);
   }
@@ -44,25 +32,10 @@ a {
 }
 
 .slide-up{
-  animation: slide-up 0.5s ease-out;
-  transition: slide-up ease-out;
-} 
-
- @keyframes slide-up {
-  0% {
-    transform:translateY(0%);
-  }
-  100% {
-    transform:translateY(100%);
-  }
-}
-
-
-.hover-up{
   transform:translateY(70%)
 }
 
-.hover-up:hover{
+.slide-up:hover{
   animation:slide-up 0.5s ease-in-out;
   animation-fill-mode:forwards;
 }
