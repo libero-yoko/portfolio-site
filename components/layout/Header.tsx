@@ -3,8 +3,8 @@ import { Bars3Icon, XCircleIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react'
 
 const styles = {
-  'expandable-menu': 'group absolute cursor-pointer md:hidden',
-  'mobile-menu':'flex flex-col h-screen w-screen gap-8 text-white bg-stone-400 items-center justify-center -translate-y-full transition ease-in-out duration-300',
+  'mobile-menu': 'group absolute cursor-pointer md:hidden',
+  'expandable-menu':'flex flex-col h-screen w-screen gap-8 text-4xl text-white bg-stone-400 items-center justify-center -translate-y-full transition ease-in-out duration-300 [&>li:hover]:text-black',
 }
 export default function Header(): React.ReactElement {
   const [showMenu, setShowMenu] = useState<Boolean>(false)
@@ -28,18 +28,20 @@ export default function Header(): React.ReactElement {
           </ul>
         </nav>
       </div>
-      <div className={styles['expandable-menu']} onClick={toggleMenu}>
+      <div className={styles['mobile-menu']}>
         {showMenu ? (
-           <XCircleIcon className="h-8 w-8 absolute top-4 left-4 z-10" />
+           <XCircleIcon className="h-8 w-8 absolute top-4 left-4 z-10" onClick={toggleMenu} />
         ) : (
-           <Bars3Icon className="h-8 w-8 absolute top-4 left-4 z-10" />
+           <Bars3Icon className="h-8 w-8 absolute top-4 left-4 z-10" onClick={toggleMenu}/>
         )}
-        <ul className={`${styles['mobile-menu']} ${showMenu && 'translate-y-0'}`}>
-          <li className="dropdown_item-1"><a href='https://google.com' target='_blank'>About</a></li>
-          <li className="dropdown_item-2">Skills</li>
-          <li className="dropdown_item-3">Projects</li>
-          <li className="dropdown_item-4">Contact</li>
-        </ul>
+        <nav onClick={toggleMenu}>
+          <ul className={`${styles['expandable-menu']} ${showMenu && 'translate-y-0'}`}>
+            <li className="dropdown_item-1"><a href='https://google.com' target='_blank'>About</a></li>
+            <li className="dropdown_item-2">Skills</li>
+            <li className="dropdown_item-3">Projects</li>
+            <li className="dropdown_item-4">Contact</li>
+          </ul>
+        </nav>
       </div>
     </div>
   )
