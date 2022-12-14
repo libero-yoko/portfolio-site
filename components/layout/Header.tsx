@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 const styles = {
   'expandable-menu': 'group absolute cursor-pointer md:hidden',
-  'mobile-menu':'flex-col h-screen w-screen gap-8 text-white bg-stone-400 items-center justify-center',
+  'mobile-menu':'flex flex-col h-screen w-screen gap-8 text-white bg-stone-400 items-center justify-center -translate-y-full transition ease-in-out duration-300',
 }
 export default function Header(): React.ReactElement {
   const [showMenu, setShowMenu] = useState<Boolean>(false)
@@ -30,11 +30,11 @@ export default function Header(): React.ReactElement {
       </div>
       <div className={styles['expandable-menu']} onClick={toggleMenu}>
         {showMenu ? (
-           <XCircleIcon className="h-8 w-8 absolute top-4 left-4" />
+           <XCircleIcon className="h-8 w-8 absolute top-4 left-4 z-10" />
         ) : (
-           <Bars3Icon className="h-8 w-8 absolute top-4 left-4" />
+           <Bars3Icon className="h-8 w-8 absolute top-4 left-4 z-10" />
         )}
-        <ul className={`${styles['mobile-menu']} ${'slide-down'} ${showMenu ? 'flex' : 'hidden'}`}>
+        <ul className={`${styles['mobile-menu']} ${showMenu && 'translate-y-0'}`}>
           <li className="dropdown_item-1"><a href='https://google.com' target='_blank'>About</a></li>
           <li className="dropdown_item-2">Skills</li>
           <li className="dropdown_item-3">Projects</li>

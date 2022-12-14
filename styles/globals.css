@@ -19,7 +19,7 @@ a {
 }
 
 .slide-down{
-  animation: slide-down 0.5s ease-out alternate;
+  animation: slide-down 0.5s ease-out forwards;
 } 
 
  @keyframes slide-down {
@@ -32,7 +32,7 @@ a {
 }
 
 .slide-up{
-  animation: slide-up 0.5s ease-out;
+  animation: slide-up 0.5s ease-out backwards;
   transition: slide-up ease-out;
 } 
 
@@ -41,7 +41,7 @@ a {
     transform:translateY(0%);
   }
   100% {
-    transform:translateY(100%);
+    transform:translateY(-100%);
   }
 }
 
