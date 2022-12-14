@@ -3,10 +3,8 @@ import { Bars3Icon, XCircleIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react'
 
 const styles = {
-  'expandable-menu':
-    'group sm:box md:hidden menu-click-area absolute cursor-pointer',
-  'active':'flex',
-  'mobile-menu':'top-16 flex-col pb-4 pl-4 gap-8 h-screen w-screen text-white bg-stone-900'
+  'expandable-menu': 'group absolute cursor-pointer md:hidden',
+  'mobile-menu':'flex-col h-screen w-screen gap-8 text-white bg-stone-400 items-center justify-center',
 }
 export default function Header(): React.ReactElement {
   const [showMenu, setShowMenu] = useState<Boolean>(false)
@@ -36,8 +34,8 @@ export default function Header(): React.ReactElement {
         ) : (
            <Bars3Icon className="h-8 w-8 absolute top-4 left-4" />
         )}
-        <ul className={`${showMenu? 'menu active' : 'menu'}`} >
-          <li className="dropdown_item-1">About</li>
+        <ul className={`${styles['mobile-menu']} ${'slide-down'} ${showMenu ? 'flex' : 'hidden'}`}>
+          <li className="dropdown_item-1"><a href='https://google.com' target='_blank'>About</a></li>
           <li className="dropdown_item-2">Skills</li>
           <li className="dropdown_item-3">Projects</li>
           <li className="dropdown_item-4">Contact</li>
