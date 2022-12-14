@@ -18,21 +18,23 @@ a {
   box-sizing: border-box;
 }
 
-.fade-in {
-  animation: fade 0.75s ease-in;
+.menu{
+  background-color: #9e999a;
+  display:none;
+  width:100vw;
+  height: 100vh;
+  transition: all 400ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-@keyframes fade {
-  0% {
-    opacity:0;
-  }
+.menu .active {
+  background-color: #e07a8d;
+  display: flex;
 }
 
 .slide-down{
-  animation: slide-down 1s ease-in-out;
-}
+  animation: slide-down 0.5s ease-out;
+} 
 
-@keyframes slide-down {
+ @keyframes slide-down {
   0% {
     transform:translateY(-100%);
   }
@@ -41,24 +43,26 @@ a {
   }
 }
 
-.grow-down{
-  animation: grow-down 0.7s ease-out forwards;
-}
+.slide-up{
+  animation: slide-up 0.5s ease-out;
+  transition: slide-up ease-out;
+} 
 
-@keyframes grow-down {
+ @keyframes slide-up {
   0% {
-    transform:translateY(-20%);
-  }
-  100% {
     transform:translateY(0%);
   }
+  100% {
+    transform:translateY(100%);
+  }
 }
 
-.slide-up{
+
+.hover-up{
   transform:translateY(70%)
 }
 
-.slide-up:hover{
+.hover-up:hover{
   animation:slide-up 0.5s ease-in-out;
   animation-fill-mode:forwards;
 }
@@ -72,11 +76,7 @@ a {
   }
 }
 
-.animate-spin {
-  animation: spin 1s 1;
-}
-
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
   }
@@ -84,4 +84,4 @@ a {
     color: white;
     background: black;
   }
-}
+} */
