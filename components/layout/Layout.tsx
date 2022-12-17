@@ -18,12 +18,12 @@ export default function Layout({ children, title }: Props): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="min-h-screen flex flex-col p-0">
+      <div className="min-h-screen flex flex-col px-4 py-20">
         <main className="p-4 flex-1 flex flex-col justify-center items-center text-stone-800 z-10">
           {children}
         </main>
-        <Footer />
       </div>
+      <Footer />
     </div>
   )
 }

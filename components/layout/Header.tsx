@@ -5,8 +5,9 @@ import { pages } from '../constants/pages'
 
 const styles = {
   'expandable-menu':
-    'absolute z-0 flex flex-col h-screen w-screen gap-8 text-4xl text-white bg-stone-400 items-center justify-center -translate-y-full transition ease-in-out duration-300 [&>li:hover]:text-black md:hidden'
+    'absolute z-0 flex flex-col h-screen w-screen gap-8 text-4xl text-white bg-stone-400 items-center justify-center -translate-y-full transition ease-in-out duration-300 [&>li:hover]:text-black md:hidden',
 }
+
 export default function Header(): React.ReactElement {
   const [showMenu, setShowMenu] = useState<Boolean>(false)
   const toggleMenu = () => {
