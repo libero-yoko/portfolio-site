@@ -1,5 +1,5 @@
 import * as React from 'react'
 
 export default function About():React.ReactElement {
-  return <>About</>
+  return <div>About. This should be selectable </div>
 }
