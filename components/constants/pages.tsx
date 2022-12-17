@@ -5,6 +5,12 @@ interface Pages  {
   slug: String,
 }
 export const pages:readonly Pages[] = [
+  {
+    id:0,
+    title:"Home",
+    description:"Top",
+    slug: ""
+  },
   { 
     id:1,
     title: "ABOUT",

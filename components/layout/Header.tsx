@@ -23,11 +23,13 @@ export default function Header(): React.ReactElement {
           )}
         </div>
         <div className="flex p-2 justify-end mid:justify-between items-center md:justify-start">
-          <a href='/About' target='_blank'><img
+          <a className="z-30" href="/">
+            <img
             src="/img/logo-dark.png"
-            className="z-10 w-12 h-12 self-end mid:self-start animate-wiggle"
+            className="w-12 h-12 self-end mid:self-start animate-wiggle"
             alt="Yoko Logo"
-          /></a>
+            />
+          </a>
           <nav className="md:flex">
             <ul className="hidden md:flex gap-8 list-none md:pl-8">
               {navMenuLink}
