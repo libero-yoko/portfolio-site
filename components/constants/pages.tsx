@@ -1,8 +1,8 @@
 interface Pages {
-  id: number;
-  title: String;
-  description: String;
-  slug: String;
+  id: number
+  title: String
+  description: String
+  slug: String
 }
 export const pages: readonly Pages[] = [
   {
@@ -35,4 +35,4 @@ export const pages: readonly Pages[] = [
     description: 'Social media and email',
     slug: 'Contact'
   }
-];
+]

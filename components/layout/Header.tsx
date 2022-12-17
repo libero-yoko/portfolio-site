@@ -1,22 +1,22 @@
-import * as React from 'react';
-import { Bars3Icon, XCircleIcon } from '@heroicons/react/24/solid';
-import { useState } from 'react';
-import { pages } from '../constants/pages';
+import * as React from 'react'
+import { Bars3Icon, XCircleIcon } from '@heroicons/react/24/solid'
+import { useState } from 'react'
+import { pages } from '../constants/pages'
 
 const styles = {
   'expandable-menu':
     'absolute z-0 flex flex-col h-screen w-screen gap-8 text-4xl text-white bg-stone-400 items-center justify-center -translate-y-full transition ease-in-out duration-300 [&>li:hover]:text-black md:hidden'
-};
+}
 export default function Header(): React.ReactElement {
-  const [showMenu, setShowMenu] = useState<Boolean>(false);
+  const [showMenu, setShowMenu] = useState<Boolean>(false)
   const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  };
+    setShowMenu(!showMenu)
+  }
   const navMenuLink = pages.map((page) => (
     <li key={page.id!}>
       <a href={`/${page.slug}`}>{page.title}</a>
     </li>
-  ));
+  ))
   return (
     <div className="h-full w-full absolute">
       <div className="flex flex-col p-0">
@@ -52,5 +52,5 @@ export default function Header(): React.ReactElement {
         </nav>
       </div>
     </div>
-  );
+  )
 }

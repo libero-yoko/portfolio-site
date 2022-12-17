@@ -1,14 +1,14 @@
-import * as React from 'react';
-import { Raleway } from '@next/font/google';
-import Head from 'next/head';
-import Header from './Header';
-import Footer from './Footer';
+import * as React from 'react'
+import { Raleway } from '@next/font/google'
+import Head from 'next/head'
+import Header from './Header'
+import Footer from './Footer'
 
-const raleway = Raleway({ subsets: ['latin'] });
+const raleway = Raleway({ subsets: ['latin'] })
 type Props = {
-  children: React.ReactElement;
-  title: string;
-};
+  children: React.ReactElement
+  title: string
+}
 export default function Layout({ children, title }: Props): React.ReactElement {
   return (
     <div className={raleway.className}>
@@ -25,5 +25,5 @@ export default function Layout({ children, title }: Props): React.ReactElement {
         <Footer />
       </div>
     </div>
-  );
+  )
 }
