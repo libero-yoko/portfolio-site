@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Layout from '../components/layout/Layout'
-import Kikko from '../components/ui/Kikko'
+import Kikko from '../components/ui/Kikko.js'
 
 export default function About(): React.ReactElement {
   return (
