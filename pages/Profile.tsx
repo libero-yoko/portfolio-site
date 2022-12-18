@@ -1,9 +1,10 @@
 import * as React from 'react'
 import Layout from '../components/layout/Layout'
+import Kikko from '../components/ui/Kikko'
 
 export default function About(): React.ReactElement {
   return (
-    <Layout title="About">
+    <Layout title="Profile">
       <div className="flex flex-col items-center md:flex-row">
         <div className="flex-1 flex flex-col gap-4">
           <h1 className="text-3xl">YOKO K.</h1>
@@ -27,8 +28,8 @@ export default function About(): React.ReactElement {
             to many more projects.
           </p>
         </div>
-        <div className="flex-1">
-          <img src="/img/ie.gif" />
+        <div className="flex-1 flex justify-center p-4">
+          <Kikko col={3} row={4} color="#E9E9E9" />
         </div>
       </div>
     </Layout>
