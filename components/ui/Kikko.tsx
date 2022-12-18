@@ -11,6 +11,7 @@ type RowProps = {
   num: number
   color: string
 }
+
 export default function Kikko({ col, row, color }: Props): ReactElement {
   const cols = new Array(col)
   for (let i = 1; i <= col; i++) {
@@ -30,14 +31,20 @@ export default function Kikko({ col, row, color }: Props): ReactElement {
 }
 
 function Cell({ color }: { color: string }): ReactElement {
-  const cellColor = `bg-[${color}]`
-  const borderColor = `border-[${color}]`
-  console.log(cellColor, borderColor)
   return (
     <div className={styles.kikko}>
-      <div className={`${styles.kikko_top} ${borderColor}`}></div>
-      <div className={`${styles.kikko_middle} ${cellColor}`}></div>
-      <div className={`${styles.kikko_bottom} ${borderColor}`}></div>
+      <div
+        className={`${styles.kikko_top}`}
+        style={{ borderBottomColor: color }}
+      ></div>
+      <div
+        className={`${styles.kikko_middle}`}
+        style={{ background: color }}
+      ></div>
+      <div
+        className={`${styles.kikko_bottom}`}
+        style={{ borderTopColor: color }}
+      ></div>
     </div>
   )
 }
