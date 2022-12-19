@@ -1,5 +1,6 @@
 import Layout from '../components/layout/Layout'
 import Button from '../components/ui/Button'
+import Kikko from '../components/ui/Kikko'
 
 export default function Home() {
   return (
@@ -9,13 +10,13 @@ export default function Home() {
           <h1 className="text-2xl md:text-5xl font-bold text-stone-500">
             YOKO K.
           </h1>
-          <h2 className="text-xl md:text-3xl font-bold text-stone-500">
-            Front-End Engineer
+          <h2 className="text-xl md:text-3xl text-stone-500">
+            Software Engineer
           </h2>
           <h3 className="text-stone-400">
             Ex.Meta Frontend Developer(contract), Ex.IBM IT Engineer
           </h3>
-          <div className="md:text-xl flex flex-col gap-2">
+          <div className="md:text-lg flex flex-col gap-2">
             <p>
               Hi there! I am a front-end engineer and tech enthusiast based in
               Seattle.
@@ -31,18 +32,20 @@ export default function Home() {
               </span>
               , and more.
             </p>
-            <a href="/Profile">
-              <Button
-                color="neutral"
-                size="md"
-                fullWidth={true}
-                label="Go to PROFILE"
-              />
-            </a>
+            <div className="self-end">
+              <a href="/About">
+                <Button
+                  color="primary"
+                  size="md"
+                  fullWidth={true}
+                  label="View Profile"
+                />
+              </a>
+            </div>
           </div>
         </div>
-        <div className="md:flex-1">
-          <img src="/img/ie.gif" />
+        <div className="flex-1 flex justify-center p-4">
+          <Kikko col={5} row={3} color="#e7e5e4" />
         </div>
       </div>
     </Layout>

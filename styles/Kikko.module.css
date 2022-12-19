@@ -8,17 +8,21 @@
   border-bottom: 14px solid gray;
   border-left: 26px solid transparent;
   border-right: 26px solid transparent;
+  transition: all 300ms ease-in-out;
 }
+
 .kikko_middle {
   width: 52px;
   height: 30px;
   background-color: gray;
+  transition: all 300ms ease-in-out;
 }
 .kikko_bottom {
   width: 0px;
   border-top: 14px solid gray;
   border-left: 26px solid transparent;
   border-right: 26px solid transparent;
+  transition: all 300ms ease-in-out;
 }
 .kikko_row {
   clear: left;

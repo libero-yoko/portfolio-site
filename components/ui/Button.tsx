@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react'
 
-type Props = {
+interface Props {
   color: 'primary' | 'secondary' | 'neutral'
   size: 'sm' | 'md' | 'lg'
   onClick?: () => void

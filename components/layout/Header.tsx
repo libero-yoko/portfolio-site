@@ -1,7 +1,7 @@
 import * as React from 'react'
 import { Bars3Icon, XCircleIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react'
-import { pages } from '../constants/pages'
+import { Pages } from '../constants/pages'
 
 const styles = {
   'expandable-menu':
@@ -13,7 +13,7 @@ export default function Header(): React.ReactElement {
   const toggleMenu = () => {
     setShowMenu(!showMenu)
   }
-  const navMenuLink = pages.map((page) => (
+  const navMenuLink = Pages.map((page) => (
     <li key={page.id!}>
       <a href={`/${page.slug}`}>{page.title}</a>
     </li>

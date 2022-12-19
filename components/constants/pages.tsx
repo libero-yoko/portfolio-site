@@ -4,34 +4,28 @@ interface Pages {
   description: String
   slug: String
 }
-export const pages: readonly Pages[] = [
+export const Pages: readonly Pages[] = [
   {
     id: 0,
-    title: 'HOME',
+    title: 'Home',
     description: 'Top',
     slug: '',
   },
   {
     id: 1,
-    title: 'PROFILE',
+    title: 'About',
     description: 'About me',
-    slug: 'Profile',
+    slug: 'About',
   },
   {
     id: 2,
-    title: 'SKILLS',
-    description: 'Skills',
-    slug: 'Skills',
-  },
-  {
-    id: 3,
-    title: 'PROJECTS',
+    title: 'Projects',
     description: 'Professional and personal projects',
     slug: 'Projects',
   },
   {
-    id: 4,
-    title: 'CONTACT',
+    id: 3,
+    title: 'Contact',
     description: 'Social media and email',
     slug: 'Contact',
   },

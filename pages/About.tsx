@@ -1,5 +1,7 @@
 import * as React from 'react'
+import { SkillCategory, Skills } from '../components/constants/skills'
 import Layout from '../components/layout/Layout'
+import Badge from '../components/ui/Badge'
 import Kikko from '../components/ui/Kikko.js'
 
 export default function About(): React.ReactElement {
@@ -27,9 +29,22 @@ export default function About(): React.ReactElement {
             With my passion for new technologies, I'm confident to bring values
             to many more projects.
           </p>
+          <div className="my-8 flex max-w-screen gap-2 flex-wrap justify-center">
+            {Skills.map((skill) => (
+              <Badge
+                key={skill.id}
+                label={skill.title}
+                color={
+                  skill.category === SkillCategory.FrontEnd
+                    ? 'border-cyan-500'
+                    : 'border-lime-500'
+                }
+              />
+            ))}
+          </div>
         </div>
         <div className="flex-1 flex justify-center p-4">
-          <Kikko col={3} row={4} color="#E9E9E9" />
+          <Kikko col={7} row={4} color="#e7e5e4" />
         </div>
       </div>
     </Layout>

@@ -1,6 +1,5 @@
-import { MouseEvent, ReactElement } from 'react'
 import styles from '../../styles/Kikko.module.css'
-
+const targetColor = '#354231'
 export default function Kikko({ col, row, color }) {
   const cols = new Array()
   for (let i = 1; i <= col; i++) {
@@ -20,13 +19,15 @@ export default function Kikko({ col, row, color }) {
 }
 
 function Cell({ color, id }) {
+  id.includes('3') ? (color = 'gray') : (color = color)
+
   function onClickCell(e) {
-    e.target.parentNode.firstChild.style = { borderTopColor: 'green' }
+    e.target.parentNode.firstChild.style = { borderTopColor: targetColor }
     e.target.parentNode.firstChild.nextSibling.style = {
-      background: '#354231'
+      background: targetColor
     }
     e.target.parentNode.lastChild.style = {
-      borderBottomColor: '#354231'
+      borderBottomColor: targetColor
     }
   }
   return (
