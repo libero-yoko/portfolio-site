@@ -9,7 +9,7 @@ export default function Projects(): ReactElement {
         <Card
           title="Ahoy"
           description="Easy to use GUI for HELM"
-          badges={['React', 'Electron', 'Kubernetes']}
+          badges={['React', 'Electron', 'Helm', 'Kubernetes']}
           url="https://ahoyhelm.org/"
         />
         <Card

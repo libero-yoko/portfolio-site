@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import Layout from '../components/layout/Layout'
 import Button from '../components/ui/Button'
 import Kikko from '../components/ui/Kikko'
@@ -32,14 +33,14 @@ export default function Home() {
               , and more.
             </p>
             <div className="self-end md:self-start">
-              <a href="/About">
+              <Link href="/About">
                 <Button
                   color="primary"
                   size="md"
                   fullWidth={true}
                   label="View Profile"
                 />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

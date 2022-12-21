@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { ReactElement } from 'react'
 
 type Props = {
@@ -23,11 +24,13 @@ export default function Card({
           </div>
         ))}
       </div>
-      <div className="px-2 w-14 bg-stone-500 text-white text-center rounded-sm  hover:animate-pulse">
-        <a href={url} target="_blank">
-          Visit
-        </a>
-      </div>
+      {url != null && (
+        <div className="px-2 w-14 bg-stone-500 text-white text-center rounded-sm  hover:animate-pulse">
+          <Link href={url} target="_blank">
+            Visit
+          </Link>
+        </div>
+      )}
     </div>
   )
 }
