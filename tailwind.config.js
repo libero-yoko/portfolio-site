@@ -22,8 +22,9 @@ module.exports = {
           '0%, 100%': { transform: 'rotate(-3deg)' },
           '50%': { transform: 'rotate(3deg)' }
         },
-        fade: {
-          '0% ': { opacity: '0' }
+        pulse: {
+          '0%,100%': { opacity: '1' },
+          '50%': { opacity: '.3' }
         },
         slideup: {
           '0%': { transform: 'translateY(75%)' },
@@ -35,7 +36,8 @@ module.exports = {
       animation: {
         wiggle: 'wiggle 1s ease-out 1',
         'fade-in': 'fade 0.75s ease-in',
-        hoverup: 'slideup 0.5s ease-in-out forwards'
+        hoverup: 'slideup 0.5s ease-in-out forwards',
+        pulse: 'pulse 0.75s ease-in'
       }
     }
   },
