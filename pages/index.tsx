@@ -1,28 +1,53 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Header from '../components/layout/Header'
-import Footer from '../components/layout/Footer'
+import Link from 'next/link'
+import Layout from '../components/layout/Layout'
+import Button from '../components/ui/Button'
+import Kikko from '../components/ui/Kikko'
 
 export default function Home() {
   return (
-    <>
-      <Head>
-        <title>Portfolio</title>
-        <meta name="description" content="Yoko's portfolio" />
-        <link rel="icon" href="/favicon.ico" />
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" />
-        <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Raleway:wght@400;500&display=swap" rel="stylesheet" />
-      </Head>
-      <div className="h-full w-full absolute"> 
-        <Header/>
+    <Layout title="Home">
+      <div className="flex flex-col md:items-center md:flex-row">
+        <div className="flex-1 flex flex-col gap-3">
+          <h1 className="text-2xl md:text-5xl font-bold text-stone-500">
+            Hi, I'm Yoko.
+          </h1>
+          <h2 className="text-xl md:text-3xl text-stone-500">
+            Software Engineer
+          </h2>
+          <h3 className="text-stone-400">
+            Ex.Meta Frontend Developer(contract), Ex.IBM IT Engineer
+          </h3>
+          <div className="md:text-lg flex flex-col gap-2">
+            <p>
+              I am a front-end engineer and tech enthusiast based in Seattle.
+            </p>
+            <p>
+              My professional pride and joy come from surfacing and visualizing
+              the customer's true needs and delivering solid products.
+            </p>
+            <p>
+              My most recent stack includes{' '}
+              <span className="font-bold text-stone-500">
+                React, GraphQL, Relay, TypeScript, Next.js, Node.js
+              </span>
+              , and more.
+            </p>
+            <div className="self-end md:self-start">
+              <Link href="/About">
+                <Button
+                  color="primary"
+                  size="md"
+                  fullWidth={true}
+                  label="View Profile"
+                />
+              </Link>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 flex justify-start items-start p-4 w-auto max-w-lg">
+          <img src="/img/profile.jpg" alt="Yoko.K Photo" />
+        </div>
       </div>
-      <div className="min-h-screen flex flex-col p-0">
-        <main className="p-4 flex-1 flex flex-col justify-center items-center text-stone-800">
-          <h1>About.</h1>
-        </main>
-        <Footer />
-      </div>
-    </>
+    </Layout>
   )
 }
