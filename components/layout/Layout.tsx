@@ -18,8 +18,8 @@ export default function Layout({ children, title }: Props): React.ReactElement {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      <div className="min-h-screen flex flex-col px-2 py-20 md:px-12">
-        <main className="p-4 flex-1 flex flex-col justify-center items-center text-stone-800 z-10">
+      <div className="min-h-screen flex flex-col px-8 py-20 md:px-16 md:py-24 box-border">
+        <main className="flex-1 flex flex-col justify-center items-center text-stone-800 z-10">
           {children}
         </main>
       </div>

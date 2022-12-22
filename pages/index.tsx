@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <Layout title="Home">
       <div className="flex flex-col md:items-center md:flex-row">
-        <div className="flex-1 flex flex-col gap-3">
+        <div className="flex-1 flex flex-col gap-3 order-2 md:order-1">
           <h1 className="text-2xl md:text-5xl font-bold text-stone-500">
             Hi, I'm Yoko.
           </h1>
@@ -44,7 +44,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <div className="flex-1 flex justify-start items-start p-4 w-auto max-w-lg">
+        <div className="flex-1 flex p-4 justify-start items-start w-auto max-w-lg order-1 md:order-2 md:self-center">
           <img src="/img/profile.jpg" alt="Yoko.K Photo" />
         </div>
       </div>

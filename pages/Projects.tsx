@@ -5,7 +5,7 @@ import Card from '../components/ui/Card'
 export default function Projects(): ReactElement {
   return (
     <Layout title="Projects">
-      <div className="flex flex-col gap-4">
+      <div>
         <Card
           title="Ahoy"
           description="Easy to use GUI for HELM"
