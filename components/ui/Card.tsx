@@ -15,27 +15,21 @@ export default function Card({
 }: Props): ReactElement {
   return (
     <div className="p-2">
-      <div className="flex flex-col p-2 flex-1 rounded-md border border-stone-500">
-        <h1 className="font-bold">{title}</h1>
-        <div className="font-light text-stone-400">{description}</div>
-        <div className="flex gap-2 py-2">
-          {badges.map((item, index) => (
-            <div
-              key={index}
-              className="px-2 border border-stone-500 rounded-sm"
-            >
-              {item}
+      {url != null && (
+        <Link href={url} target="_blank">
+          <div className="flex flex-col flex-1 rounded-md border border-stone-500 hover:opacity-50">
+            <h1 className="font-bold mt-2 mx-2">{title}</h1>
+            <div className="font-light mx-2 text-stone-400">{description}</div>
+            <div className="flex gap-2 mx-2 py-2">
+              {badges.map((item, index) => (
+                <div key={index} className="border border-stone-500 rounded-sm">
+                  <span className="mx-2">{item}</span>
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-        {url != null && (
-          <div className="px-2 w-14 bg-stone-500 text-white text-center rounded-sm  hover:animate-pulse place-self-end">
-            <Link href={url} target="_blank">
-              Visit
-            </Link>
           </div>
-        )}
-      </div>
+        </Link>
+      )}
     </div>
   )
 }

@@ -7,6 +7,12 @@ export default function Projects(): ReactElement {
     <Layout title="Projects">
       <div>
         <Card
+          title="yoko.codes"
+          description="This portfolio website"
+          badges={['React', 'Next.js', 'TypeScript']}
+          url="https://yoko.codes/"
+        />
+        <Card
           title="Ahoy"
           description="Easy to use GUI for HELM"
           badges={['React', 'Electron', 'Helm', 'Kubernetes']}
