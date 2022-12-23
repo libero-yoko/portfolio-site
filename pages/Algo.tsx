@@ -3,8 +3,8 @@ import { get2DArray } from '../components/algo/floodfill'
 import Layout from '../components/layout/Layout'
 
 export default function Algo(): ReactElement {
-  const [x, setX] = useState<number | null>(null)
-  const [y, setY] = useState<number | null>(null)
+  const [x, setX] = useState<string>('')
+  const [y, setY] = useState<string>('')
   const [array, setArray] = useState<Array<Array<number>> | null>(null)
   useEffect(() => {
     updateTile(5, 5)
@@ -26,9 +26,9 @@ export default function Algo(): ReactElement {
 
   const updateTile = (x: number, y: number) => {
     const newY = validateNum(y)
-    setY(newY)
+    setY(newY.toString())
     const newX = validateNum(x)
-    setX(newX)
+    setX(newX.toString())
 
     const array = get2DArray(newX, newY)
     setArray(array)
@@ -70,7 +70,7 @@ export default function Algo(): ReactElement {
               value={x ?? 0}
               className="flex w-sm text-stone-500 border boder-stone-800 rounded-sm"
               onChange={(e) => {
-                updateTile(Number(e.target.value), y ?? 0)
+                updateTile(Number(e.target.value), parseInt(y))
               }}
             ></input>
           </label>
@@ -85,11 +85,13 @@ export default function Algo(): ReactElement {
               value={y ?? 0}
               className="flex w-sm text-stone-500 border boder-stone-800 rounded-sm"
               onChange={(e) => {
-                updateTile(x ?? 0, Number(e.target.value))
+                updateTile(parseInt(x), Number(e.target.value))
               }}
             ></input>
           </label>
-          <button onClick={() => updateTile(x ?? 0, y ?? 0)}>Reset</button>
+          <button onClick={() => updateTile(parseInt(x), parseInt(y))}>
+            Reset
+          </button>
         </div>
       </>
     </Layout>
