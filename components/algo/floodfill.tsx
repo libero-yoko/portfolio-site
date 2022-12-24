@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-const get2DArray = (x: number, y: number): Array<Array<number>> => {
+export const get2DArray = (x: number, y: number): Array<Array<number>> => {
   const col = []
   for (let i = 0; i < y; i++) {
     const row = []

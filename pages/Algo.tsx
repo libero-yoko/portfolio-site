@@ -1,5 +1,5 @@
 import { ReactElement, useEffect, useState } from 'react'
-import FloodFill from '../components/algo/FloodFill'
+import FloodFill from '../components/algo/floodfill'
 
 import Layout from '../components/layout/Layout'
 
