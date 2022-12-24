@@ -12,16 +12,6 @@ const get2DArray = (x: number, y: number): Array<Array<number>> => {
   return col
 }
 
-const validateNum = (num: number): number => {
-  if (num < 0) {
-    num = 0
-  }
-  if (num > 10) {
-    num = 10
-  }
-  return num
-}
-
 export default function FloodFill() {
   const [x, setX] = useState<string>('')
   const [y, setY] = useState<string>('')
@@ -29,6 +19,20 @@ export default function FloodFill() {
   useEffect(() => {
     updateTile(5, 5)
   }, [])
+
+  useEffect(() => {
+    console.log(x, y)
+  }, [x, y])
+
+  function validateNum(num: number): number {
+    if (num < 0) {
+      num = 0
+    }
+    if (num > 10) {
+      num = 10
+    }
+    return num
+  }
 
   const updateTile = (x: number, y: number) => {
     const newY = validateNum(y)
@@ -39,7 +43,7 @@ export default function FloodFill() {
     setArray(array)
   }
 
-  const spreadColor = (
+  const floodFill = (
     y: number,
     x: number,
     newColor: number,
@@ -58,10 +62,10 @@ export default function FloodFill() {
       const newArray = [...array]
       newArray[y][x] = newColor
       setArray(newArray)
-      setTimeout(() => spreadColor(y + 1, x, newColor, targetColor), 300)
-      setTimeout(() => spreadColor(y - 1, x, newColor, targetColor), 300)
-      setTimeout(() => spreadColor(y, x + 1, newColor, targetColor), 300)
-      setTimeout(() => spreadColor(y, x - 1, newColor, targetColor), 300)
+      setTimeout(() => floodFill(y + 1, x, newColor, targetColor), 300)
+      setTimeout(() => floodFill(y - 1, x, newColor, targetColor), 300)
+      setTimeout(() => floodFill(y, x + 1, newColor, targetColor), 300)
+      setTimeout(() => floodFill(y, x - 1, newColor, targetColor), 300)
     }
   }
   return (
@@ -84,7 +88,7 @@ export default function FloodFill() {
                     key={index}
                     onClick={() => {
                       let currentColor = array[rowIndex][colIndex]
-                      spreadColor(rowIndex, colIndex, 2, currentColor)
+                      floodFill(rowIndex, colIndex, 2, currentColor)
                     }}
                     className={`w-8 h-8 text-center flex justify-center items-center ${cellColor} border border-stone-400 rounded-full`}
                   ></div>
@@ -126,10 +130,7 @@ export default function FloodFill() {
           ></input>
         </label>
       </div>
-      <button
-        className="bg-stone-200 px-2 rounded-md"
-        onClick={() => updateTile(parseInt(x), parseInt(y))}
-      >
+      <button onClick={() => updateTile(parseInt(x), parseInt(y))}>
         Reset
       </button>
     </>
