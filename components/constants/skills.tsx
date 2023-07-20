@@ -13,76 +13,91 @@ export const Skills: readonly Skills[] = [
   {
     id: 0,
     title: 'React',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 1,
     title: 'React Hooks',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 2,
     title: 'GraphQL',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 3,
     title: 'Relay',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 4,
     title: 'JavaScript',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 5,
     title: 'TypeScript',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 6,
     title: 'Next.js',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 7,
     title: 'HTML',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 8,
     title: 'CSS',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 9,
     title: 'Tailwind',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 10,
     title: 'MaterialUI',
-    category: SkillCategory.FrontEnd,
+    category: SkillCategory.FrontEnd
   },
   {
     id: 11,
     title: 'Node.js',
-    category: SkillCategory.BackEnd,
+    category: SkillCategory.BackEnd
   },
   {
     id: 12,
     title: 'SQL databases',
-    category: SkillCategory.BackEnd,
+    category: SkillCategory.BackEnd
   },
   {
     id: 13,
     title: 'MongoDB',
-    category: SkillCategory.BackEnd,
+    category: SkillCategory.BackEnd
+  },
+  {
+    id: 14,
+    title: 'Python',
+    category: SkillCategory.BackEnd
+  },
+  {
+    id: 15,
+    title: 'Flask',
+    category: SkillCategory.BackEnd
   },
   {
     id: 14,
     title: 'Git',
-    category: SkillCategory.Other,
+    category: SkillCategory.Other
   },
+  {
+    id: 15,
+    title: 'Azure DevOps',
+    category: SkillCategory.Other
+  }
 ]
